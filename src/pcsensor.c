@@ -274,7 +274,7 @@ void interrupt_read_temperatura(usb_dev_handle *dev, float *tempC) {
       printf("\n");
     }
     
-    temperature = (answer[3] & 0xFF) + (answer[2] << 8);
+    temperature = (answer[3] & 0xFF) + ((signed char)answer[2] << 8);
     temperature += calibration;
     *tempC = temperature * (125.0 / 32000.0);
 
