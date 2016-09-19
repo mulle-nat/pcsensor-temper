@@ -1,4 +1,3 @@
-
 This is software found rather uncommented on the internet (see below for the actual source)
 and then changed to allow for multiple devices to be queried.
 
@@ -10,9 +9,20 @@ Mine was an [M-Ware ID7747](http://www.m-ware.de/m-ware-usb-thermometer-40--120-
 
 ## Manjaro 
 
-```bash 
+``` bash 
 sudo pacman -S libusb-compat
 ```
+
+## Alpine
+
+``` bash
+sudo apk update 
+sudo apk add gcc make musl-dev libusb-compat-dev
+``` 
+
+In general check with `dmesg -W` for USB connection. Check with `lsusb` 
+if device still there (mine is flakey)
+
 
 # ORIGIN
 
