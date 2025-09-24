@@ -37,9 +37,9 @@
 #include <string.h>
 #include <errno.h>
 #include <signal.h> 
+#include <ctype.h> 
  
- 
-#define VERSION "1.0.0"
+#define VERSION "1.0.2"
  
 #define VENDOR_ID  0x0c45
 #define PRODUCT_ID 0x7401
@@ -73,7 +73,7 @@ void bad(const char *why) {
 }
  
  
-usb_dev_handle *find_lvr_winusb();
+usb_dev_handle *find_lvr_winusb( int handle);
  
 void usb_detach(usb_dev_handle *lvr_winusb, int iInterface) {
         int ret;

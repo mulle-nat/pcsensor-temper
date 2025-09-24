@@ -6,6 +6,14 @@ It works with TEMPer devices that present a USB ID like this: `0c45:7401 Microdi
 
 Mine was an [M-Ware ID7747](http://www.m-ware.de/m-ware-usb-thermometer-40--120-c-emailbenachrichtigung-id7747/a-7747/).
 
+# Tips
+
+## Manjaro 
+
+```bash 
+sudo pacman -S libusb-compat
+```
+
 # ORIGIN
 
 Downloaded from [here](http://www.isp-sl.com/pcsensor-1.0.0.tgz)
